@@ -6,6 +6,9 @@ class FooEnv(gym.Env):
   metadata = {'render.modes': ['human']}
 
   def __init__(self):
+    self.min = -1
+    
+    self.action_space = spaces.Box(low=np.array([0,0,0]), high = np.array([5,5,5]), dtype=np.float16)
     ...
   def step(self, action):
     ...
